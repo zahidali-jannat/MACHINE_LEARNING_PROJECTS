@@ -1,43 +1,7 @@
-# Core Data + ML Libraries
-numpy==1.26.4
-pandas==2.2.3
-scikit-learn==1.5.2
-scipy==1.14.1
-matplotlib==3.9.2
-seaborn==0.13.2
-tqdm==4.66.5
-joblib==1.4.2
-
-# Deep Learning (PyTorch CPU build; use CUDA version if GPU)
-torch==2.4.1
-torchvision==0.19.1
-torchaudio==2.4.1
-
-# Image Processing
-opencv-python==4.10.0.84
-Pillow==10.4.0
-scikit-image==0.24.0
-
-# Jupyter & Notebook Environment
-jupyter==1.1.1
-jupyterlab==4.3.1
-notebook==7.2.2
-ipykernel==6.29.5
-ipywidgets==8.1.5
-
-# Utility + Web + Misc
-requests==2.32.3
-urllib3==2.2.3
-packaging==24.1
-filelock==3.16.0
-typing_extensions==4.12.2
-psutil==6.0.0
-colorama==0.4.6
-
-# Visualization / Analysis
-plotly==5.24.1
-grad-cam==1.5.6
-
-# Optional (YAML, JSON, etc.)
-PyYAML==6.0.2
-jsonschema==4.23.0
+python=3.9
+numpy 
+pandas
+torch
+glob 
+opencv-python
+sys
