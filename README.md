@@ -20,7 +20,8 @@ for f in glob.iglob('./data/dataset/no/*.jpg'):
     img=cv2.merge([r, g, b])
     health.append(img)
 
-2-> Usage of glob.iglob iglobe is a function inside glob module which returns a iterator which means it provide one file path at a time as you loop through it.
+2-> Usage of glob.iglob iglobe is a function inside glob module which returns a iterator which means it provide one file path at a time as you loop through it. 
+Means woh directory keh andar jaega location per or waha iterate karega all over upr seh neech jb tak khtm nhi ho jata maal andar kah mtlb images 
 
 3-> Use of cv2 
 What is cv2 (pip install opencv-python like that might be check if it is wrong)
@@ -38,3 +39,25 @@ Large images have more pixels, which increases memory usage and slows down proce
 
 Resizing ensures that all images are scaled similarly, which helps the model learn more consistently and improves accuracy.
  img=cv2.resize(img , (128 , 128)) input which image u want to resize and in tuple pass the input shape
+
+5->Next question you may have is why we have done b , g , r not  r , g , b we merge them aslso why??
+Ans: opencv be default splits image pixels into b g r format means if u have dimention like [50 , 100 , 150] means b=50 , g=100 , r=150 but most of the deep learning model accept  input as RGB that why  we  made three list b , g , r which stores number blue , green , red respectiviely than i merged them as rgb. 
+
+
+health.shape (Important need ur focus here pls)
+(1218, 128, 128, 3) 
+health.shape[0] will give 1218 which is total number of images we have 
+health.shape[1], health.shape[2] it tell images size 128 x 128 
+health.shape[3] it tells there are three channel R G B  Each one of them size 128 x 128 they are like in row one is behind another and each of them size 128 x 128 and number of images is 1218 
+
+
+import random which is a part of numpy 
+np.random.choice(tumor.shape[0] , num , replace=False) iska matlb hai tumhare pas choice hai 1218 mai seh koi bhi num=koi bhi integer randomly select karo , replae=False means tum joh choose kroge repeated nhi hoga jaise index 1 2 3 4 5 okay if num=5 , if num=6 u can not have 1 2 2 3 4 5 replce=False means same index dubara nhi instead hoga 1 2 3 4 5 6 
+
+
+
+I am not explaning portion of subplot it is too basic try to learn on your own i will explain other things in details later own
+
+
+
+
